@@ -1,0 +1,187 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0,0,0,0.1);
+}
+/* ------------ container ------------ */
+.container{
+    padding:10px;
+    width:380px;
+   /* margin-top:1em ; */
+    margin-left: 1em;
+    border: thin solid blue;
+    float: left;
+}
+
+/* ------------ header ------------ */
+.header{
+    width: 380px;
+    height:200px;
+    /*randomize the generated image when done with evrtg else*/
+    background-image: url('https://images.pexels.com/photos/2724664/pexels-photo-2724664.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    border-radius: 15px ;
+    position: relative;
+    border: thin solid green;
+}
+.clear{
+    width : 20px;
+    height: 20px;
+    position: absolute;
+    right:10px;
+    top: 10px;
+}
+.clear i{
+    font-size: 20px;
+    color: #FFF;
+}
+.clear i:hover{
+    cursor: pointer;
+    text-shadow: 5px 3px 5px #000;
+    transform: rotate(90deg);
+}
+#date{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: #FFF;
+    font-size: 20px;
+    font-family: sans-serif ;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+/* ------------ content ------------ */
+.content{
+    margin-top: 0.5em;
+    width:380px;
+    height: 350px;
+    max-height:350px;
+    background-color: #FFF;
+    overflow: auto;
+    border: thin solid black;
+}
+.content ul{
+    padding:0;
+    margin:0;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:380px;
+    height: 45px;
+    min-height: 45px;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin:  0;
+    border-bottom: 2px solid lightgray;
+    
+}
+.item i{
+    position: relative;
+    top: 15px;
+    font-size: 20x;
+}
+.item i:hover{
+    cursor: pointer;
+    font-size: 25px;
+}
+.item i.fa-circle-thin{
+    left: 10px;
+}
+.item i.fa-check-circle{
+    left: 10px;
+}
+.fa-check-circle{
+    color:#6eb200;
+}
+.item i.text{
+    text-align: left;
+}
+.lineThrough{
+    text-decoration: line-through;
+    color : #ccc;
+}
+.item i.fa-trash-o{
+    right: 10px;
+}
+
+
+/* ------------ add item ------------ */
+.add-to-do{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 360px;
+    height:20px;
+    background-color: #FFF;
+    padding: 10px;
+    margin-top: 0.3em;
+    border-top: 2px solid rgba(0,0,0,0.1);
+}
+.add-to-do i{
+    position: relative;
+    font-size: 20px;
+}
+.add-to-do i.fa-plus-circle{
+    font-size: 20px;
+    color: darkblue;
+}
+.add-to-do i.fa-plus-circle:hover{
+    cursor: pointer;
+    color: blue;
+}
+.add-to-do input{
+    position: relative;
+    right: 5px;
+    height: 22px;
+    width: 330px;
+    border: none;
+    font-size: 20px;
+    padding-left:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

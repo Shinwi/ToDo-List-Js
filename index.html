@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Js ToDo List</title>
+    <script src="https://kit.fontawesome.com/ce405bdaa5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="clear tooltip">
+                <i class="fa fa-refresh"></i>
+                <span class="tooltiptext">delete all todo tasks from local storage</span>
+            </div>
+            <div id="date"></div>
+        </div>
+        <div class="content">
+            <ul id="list">
+                <!--
+                <li class="item">
+                   <i class="fa fa-circle-thin complete" job="complete" id="0" ></i>
+                    <p class="text ">dir shi haja</p>
+                    <i class="fa fa-trash-o delete" job="delete" id="0"></i> 
+                </li>
+                <li class="item">
+                    <i class="fa fa-check-circle complete" job="complete" id="0" ></i>
+                     <p class="text">dir shi haja</p>
+                     <i class="fa fa-trash-o delete" job="delete" id="0"></i> 
+                 </li>
+                -->
+            </ul>
+        </div>
+        <div class="add-to-do">
+            <input type="text"  id="input" placeholder="Ash baghi tdir?">
+            <i class="fas fa-plus-circle"></i>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
