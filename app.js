@@ -16,7 +16,7 @@ let data = localStorage.getItem("TODO");
 //check if data is not empty
 if(data){
     LIST = JSON.parse(data);
-    id = LIST.length-1; //set id to last elem in LIST
+    id = LIST.length; //set id to last elem in LIST
     loadList(LIST);
 }else{
     LIST=[];
@@ -24,8 +24,8 @@ if(data){
 }
 
 /*load items to users interface */
-function loadList(array){
-    array.forEach(function(item){
+function loadList(list){
+    list.forEach(function(item){
         addToDo(item.name, item.id , item.done, item.trash);
     })
 } 
@@ -44,7 +44,7 @@ dateEelement.innerHTML = today.toLocaleDateString("en-US", options);
 
 //add todo function
 function addToDo(toDo, id, done, trash){
-    if(trash){return;} //if item is in the trash, do nada
+    if(trash){return;} //if item is in the trash, do nothing
 
     const DONE = done ? CHECK : UNCHECK;
     const LINE = done? LINE_THROUGH : "";
@@ -71,7 +71,7 @@ document.addEventListener("keyup", function(event){
         const toDo = input.value ;
         //if input is not empty
         if(toDo){
-            addToDo(toDo);
+            addToDo(toDo,id, false, false);
             //add the toDo to the list
             LIST.push( {
                 name : toDo,
@@ -82,6 +82,7 @@ document.addEventListener("keyup", function(event){
             id++;
             //add where LIST is updated
             localStorage.setItem("TODO", JSON.stringify(LIST));
+            //fixes the issue but worsen the UX: location.reload();
         }
         input.value = ""; //to clear the input field after an input is added.
     }
@@ -102,6 +103,7 @@ function removeToDo(element){
     element.parentNode.parentNode.removeChild(element.parentNode);
     LIST[element.id].trash = true;
     
+    
 }
 
 //target items created dynamically
@@ -113,6 +115,6 @@ list.addEventListener("click", function(event){
     } else if(elementJob == "complete"){
         completeToDo(element);
     }
-    //add where LIST is updated
+    //updating LIST
     localStorage.setItem("TODO", JSON.stringify(LIST));
 });
