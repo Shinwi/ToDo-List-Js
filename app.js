@@ -118,3 +118,73 @@ list.addEventListener("click", function(event){
     //updating LIST
     localStorage.setItem("TODO", JSON.stringify(LIST));
 });
+
+
+
+//fetching the quotes api
+fetch("https://type.fit/api/quotes") 
+  .then( //trasnforming received data into json format
+     response => response.json() 
+    )
+    .then(data => {
+       // console.log(data[18].author); prints author in index 18
+       // console.log(data[17].text); prints text in index 17
+       //console.log(data);  prints all elements of the array 
+        showQuote(data);
+    } )
+    .catch(error => console.log("Error"));
+
+
+    showQuote = quote =>{
+        const quoteDiv = document.getElementById("quotes");
+        const quoteText = document.createElement('p');
+        const quoteAuthor = document.createElement('p');
+
+        //quote index to display
+        const idx = Math.floor((Math.random() * 1000) + 1);
+        quoteText.innerText = `"${quote[idx].text}"`;
+        if(quote[idx].author){
+            quoteAuthor.innerText = `-${quote[idx].author}`;
+        } else{ //if author val is null 
+            quoteAuthor.innerText = "-Lee Hwak";
+        }
+        
+        console.log(quoteText);
+        console.log(quoteText.textContent);
+        console.log(quoteText.textContent.length);
+        let hehe = 100*quoteText.textContent.length;
+    
+        //animating the quote
+        //console.log(quoteText);
+        //console.log(quoteText.textContent);
+        const spltTxt = quoteText.textContent.split("");
+        quoteText.innerHTML = "";
+        for(let i=0 ; i<spltTxt.length ; i++){
+          quoteText.innerHTML += "<span>"+spltTxt[i]+"</span>";
+        }
+
+        //to loop through all the spans
+        let char=0;
+        let timer = setInterval(onTick, 50);
+
+        function onTick(){
+          const span = quoteText.querySelectorAll('span')[char];
+          span.classList.add('text-fade');
+          char++;
+
+          if(char === spltTxt.length){
+            sala();
+            //shows the author name 1s atfter the quote is shown
+            setTimeout( s => quoteDiv.append(quoteAuthor) , 1000);
+            return;
+          }
+        }
+        //end it
+        function sala(){
+          clearInterval(timer);
+          timer = null;
+        }
+        
+        quoteDiv.append(quoteText);
+ 
+    }

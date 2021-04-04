@@ -2,7 +2,9 @@ body{
     padding: 0;
     margin: 0;
     background-color: rgba(0,0,0,0.1);
+    height: 100%;
 }
+
 /* ------------ container ------------ */
 .container{
     padding:10px;
@@ -159,6 +161,32 @@ body{
     padding-left:10px;
 }
 
+/*----quotes----*/
+#quotes{
+    overflow: hidden;
+    /*border: thin solid black; */
+    /*background-color: gray; */
+    padding: 4em 2em;
+    max-height: 100vh;
+}
+
+
+p, span{
+    color: black;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+
+/*for styling elements in the span */
+span {
+    opacity: 0;
+    transition: all 0.1s ease-in;
+    transform: translateY(50px);
+    
+}
+span.text-fade{
+    opacity: 1;
+} 
 
 
 
