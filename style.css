@@ -123,9 +123,7 @@ body{
 .fa-check-circle{
     color:#6eb200;
 }
-.item i.text{
-    text-align: left;
-}
+
 .lineThrough{
     text-decoration: line-through;
     color : #ccc;
@@ -133,7 +131,6 @@ body{
 .item i.fa-trash-o{
     right: 10px;
 }
-
 
 /* ------------ add item ------------ */
 .add-to-do{
@@ -170,20 +167,29 @@ body{
     padding-left:10px;
 }
 
+/*hiding quotes when screen is small*/
+@media only screen and (max-width: 650px){
+    #quotes{
+        display: none;
+    }
+    /*make the todo panel center of the page*/
+   .container{
+    margin: 0.5em auto;
+    float: none;
+   }
+}
+
 /*----quotes----*/
 #quotes{
     overflow: hidden;
-    /*border: thin solid black; */
-    /*background-color: gray; */
     padding: 4em 2em;
     max-height: 100vh;
 }
 
-
 #quotes> p, span{
     color: black;
     font-size: 1.5em;
-    font-family: sans-serif;
+    font-family: Lovelace;
 }
 
 /*for styling elements in the span */
@@ -196,6 +202,7 @@ span {
 span.text-fade{
     opacity: 1;
 } 
+
 
 
 

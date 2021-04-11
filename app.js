@@ -187,17 +187,7 @@ fetch("https://type.fit/api/quotes")
     }
 
 
-    /*Tasks for today:
-        -style the border
-        -add changing background image
-        -hide the quotes when screen is phone sized
-        -show toDo text on the side instead of middle
-    
-     */
-
-//set background image for the body
-//document.body.style.backgroundImage = "url('https://images.pexels.com/photos/2724664/pexels-photo-2724664.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')";
-    
+//displaying different images in the header background when the page is refershed
 function addImage(){
     //an array to store the links of background images we want to be shown
     var links = [
@@ -229,4 +219,8 @@ function addImage(){
 
 }
 addImage();
+
+
+
+
 
