@@ -10,9 +10,14 @@ body{
     padding:10px;
     width:380px;
    /* margin-top:1em ; */
-    margin-left: 1em;
+   /*might delete the margin later*/
+    margin: 0.5em ;
+    margin-left: 1.5em;
+    height: fit-content;
     border: thin solid blue;
     float: left;
+    border-radius: 15px;
+    Box-Shadow: -4px 0px 26px 15px rgba(0,0,0,0.55);
 }
 
 /* ------------ header ------------ */
@@ -60,15 +65,16 @@ body{
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-  
+    
     /* Position the tooltip */
     position: absolute;
-    z-index: 1;
+    z-index: 1; 
 }
-  
+
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
 /* ------------ content ------------ */
 .content{
     margin-top: 0.5em;
@@ -78,6 +84,7 @@ body{
     background-color: #FFF;
     overflow: auto;
     border: thin solid black;
+    border-radius: 15px ;
 }
 .content ul{
     padding:0;
@@ -138,6 +145,7 @@ body{
     padding: 10px;
     margin-top: 0.3em;
     border-top: 2px solid rgba(0,0,0,0.1);
+    border-radius: 15px ;
 }
 .add-to-do i{
     position: relative;
