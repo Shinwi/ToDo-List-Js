@@ -102,8 +102,6 @@ function completeToDo(element){
 function removeToDo(element){
     element.parentNode.parentNode.removeChild(element.parentNode);
     LIST[element.id].trash = true;
-    
-    
 }
 
 //target items created dynamically
@@ -149,10 +147,9 @@ fetch("https://type.fit/api/quotes")
             quoteAuthor.innerText = "-Lee Hwak";
         }
         
-        console.log(quoteText);
-        console.log(quoteText.textContent);
-        console.log(quoteText.textContent.length);
-        let hehe = 100*quoteText.textContent.length;
+        //console.log(quoteText);
+        //console.log(quoteText.textContent);
+        //console.log(quoteText.textContent.length);
     
         //animating the quote
         //console.log(quoteText);
@@ -188,3 +185,48 @@ fetch("https://type.fit/api/quotes")
         quoteDiv.append(quoteText);
  
     }
+
+
+    /*Tasks for today:
+        -style the border
+        -add changing background image
+        -hide the quotes when screen is phone sized
+        -show toDo text on the side instead of middle
+    
+     */
+
+//set background image for the body
+//document.body.style.backgroundImage = "url('https://images.pexels.com/photos/2724664/pexels-photo-2724664.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')";
+    
+function addImage(){
+    //an array to store the links of background images we want to be shown
+    var links = [
+        "url('https://images.pexels.com/photos/2724664/pexels-photo-2724664.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')",
+
+        "url('https://images.pexels.com/photos/258112/pexels-photo-258112.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')",
+
+        "url('https://images.pexels.com/photos/733995/pexels-photo-733995.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')",
+
+        "url('https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')",
+
+        "url('https://images.pexels.com/photos/1666012/pexels-photo-1666012.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')",
+
+        "url('https://images.pexels.com/photos/1785493/pexels-photo-1785493.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')",
+
+        "url('https://images.pexels.com/photos/2387876/pexels-photo-2387876.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')",
+
+        "url('https://images.pexels.com/photos/2832039/pexels-photo-2832039.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')"
+
+    ];
+    //var to store the random generated number which will work as index of links
+    var random = Math.floor( Math.random()*links.length );
+    console.log("random is: "+random);
+
+    //adding the background-image property to the css sytlesheet
+    document.getElementsByClassName('header')[0].style.backgroundImage=links[random];
+
+    //document.getElementsByClassName('header').setAttribute("style", "background-image:"+ links[random] +");background-repeat: no-repeat");
+
+}
+addImage();
+

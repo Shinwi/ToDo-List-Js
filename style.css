@@ -25,12 +25,13 @@ body{
     width: 380px;
     height:200px;
     /*randomize the generated image when done with evrtg else*/
-    background-image: url('https://images.pexels.com/photos/2724664/pexels-photo-2724664.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    /*will be added by js
+    background-image: url('https://images.pexels.com/photos/2724664/pexels-photo-2724664.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');*/
     background-size: 100% 200%;
     background-repeat: no-repeat;
     border-radius: 15px ;
     position: relative;
-    border: thin solid green;
+    border: thin solid black;
 }
 .clear{
     width : 20px;
@@ -83,7 +84,7 @@ body{
     max-height:350px;
     background-color: #FFF;
     overflow: auto;
-    border: thin solid black;
+    /*border: thin solid black;*/
     border-radius: 15px ;
 }
 .content ul{
