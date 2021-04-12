@@ -65,16 +65,15 @@ function addToDo(toDo, id, done, trash){
     addToDo("tketbat?");
 */
 
-//add an intem to the list when the user presses Enter
-document.addEventListener("keyup", function(event){
-    if(event.keyCode == 13){  //ascii code for enter key: 13
-        const toDo = input.value ;
-        //if input is not empty
-        if(toDo){
-            addToDo(toDo,id, false, false);
-            //add the toDo to the list
-            LIST.push( {
-                name : toDo,
+//function that takes care of adding the input to the toDo list
+function addThis(){
+    const toDo = input.value;
+    //if input is not empty
+    if(toDo){
+        addToDo(toDo, id, false, false);
+        //add the ToDo to the list
+        LIST.push( {
+            name : toDo,
                 id : id,
                 done : false,
                 trash : false
@@ -82,9 +81,24 @@ document.addEventListener("keyup", function(event){
             id++;
             //add where LIST is updated
             localStorage.setItem("TODO", JSON.stringify(LIST));
-            //fixes the issue but worsen the UX: location.reload();
+        } else{
+            console.log("empty input");
+            alert("Please Fill The Input Field");
         }
-        input.value = ""; //to clear the input field after an input is added.
+        //to clear the input field after an input is added.
+        input.value = ""; 
+       
+}
+
+//a function to be executed when the plus circle is clicked
+function plusButtonAdd(){
+    console.log("+ button was clicked");
+    addThis();
+}
+//add an intem to the list when the user presses Enter
+document.addEventListener("keyup", function(event){
+    if(event.keyCode == 13 ){  //ascii code for enter key: 13
+        addThis();
     }
 });
 
@@ -231,7 +245,6 @@ function addImage(){
     //adding the background-image property to the css sytlesheet
     document.getElementsByClassName('header')[0].style.backgroundImage=links[random];
 
-    //document.getElementsByClassName('header').setAttribute("style", "background-image:"+ links[random] +");background-repeat: no-repeat");
 
 }
 addImage();
