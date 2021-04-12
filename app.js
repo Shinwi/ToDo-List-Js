@@ -205,7 +205,23 @@ function addImage(){
 
         "url('https://images.pexels.com/photos/2387876/pexels-photo-2387876.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')",
 
-        "url('https://images.pexels.com/photos/2832039/pexels-photo-2832039.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')"
+        "url('https://images.pexels.com/photos/2832039/pexels-photo-2832039.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')",
+
+        "url('https://images.pexels.com/photos/1424246/pexels-photo-1424246.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')",
+
+        "url('https://images.pexels.com/photos/4261096/pexels-photo-4261096.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')",
+
+        "url('https://images.pexels.com/photos/5185041/pexels-photo-5185041.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')",
+
+        "url('https://images.pexels.com/photos/6439051/pexels-photo-6439051.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')",
+
+        "url('https://images.pexels.com/photos/4641231/pexels-photo-4641231.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')",
+
+        "url('https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')",
+
+        "url('https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')",
+
+        "url('https://images.pexels.com/photos/1450082/pexels-photo-1450082.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')"
 
     ];
     //var to store the random generated number which will work as index of links
